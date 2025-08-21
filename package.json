@@ -1,10 +1,11 @@
 {
+  "name": "vitesse-tauri",
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.7.0",
   "scripts": {
     "build": "vite-ssg build",
-    "dev": "vite --port 3333 --open",
+    "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
@@ -14,9 +15,12 @@
     "typecheck": "vue-tsc --noEmit",
     "up": "taze major -I",
     "postinstall": "npx simple-git-hooks",
-    "sizecheck": "npx vite-bundle-visualizer"
+    "sizecheck": "npx vite-bundle-visualizer",
+    "tauri": "tauri"
   },
   "dependencies": {
+    "@tauri-apps/api": "catalog:frontend",
+    "@tauri-apps/plugin-opener": "catalog:frontend",
     "@unhead/vue": "catalog:frontend",
     "@unocss/reset": "catalog:frontend",
     "@vueuse/core": "catalog:frontend",
@@ -31,6 +35,7 @@
     "@iconify-json/carbon": "catalog:dev",
     "@intlify/unplugin-vue-i18n": "catalog:build",
     "@shikijs/markdown-it": "catalog:build",
+    "@tauri-apps/cli": "catalog:dev",
     "@types/markdown-it-link-attributes": "catalog:types",
     "@types/nprogress": "catalog:types",
     "@unocss/eslint-config": "catalog:build",
